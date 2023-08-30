@@ -1,0 +1,97 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-bottom: 150px;
+  padding-top: 80px;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 10%;
+  padding-top: 5%;
+}
+
+.projectHeader {
+  font-size: 3rem;
+  color: #51C1F1;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10%;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.cardHeader {
+  text-align: center;
+  font-size: 2rem;
+  color: #51C1F1;
+}
+
+.blogImg {
+  width: 100%;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.front {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.back {
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+  backface-visibility: hidden;
+}
+
+.pTag {
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 540px) {
+  .pTag {
+    font-size: 0.7rem;
+  }
+}
+
+
+.sourceTag {
+  color: white;
+  padding-left: 10px;
+}
+
+.descriptionTag {
+  color: white;
+  float: right;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.backTag {
+  color: white;
+  float: right;
+  padding-right: 15px;
+  padding-bottom: 10px;
+}
