@@ -40,7 +40,7 @@ export default function Contact() {
     /* If the email address is valid and the message is not empty */
     /* If the email address is valid and the message is not empty */
     axios
-      .post("http://localhost:5000/contact-form", {
+      .post("https://adamsbrandon.onrender.com/contact-form", {
         name,
         email,
         message,
