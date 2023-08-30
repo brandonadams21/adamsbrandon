@@ -27,7 +27,7 @@
     "nodemailer": "^6.9.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts start && cd server && node app.js",
     "server": "cd server && node app.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
