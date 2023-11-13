@@ -6,7 +6,8 @@ function About() {
     <div className="about" id="aboutMe">
       <h1 className="aboutHeader">About me</h1>
       <p class="aboutParagraph" style={{ paddingTop: "10px" }}>
-        Full stack developer. Based in Clarksville, Tennessee.
+        Lead Full Stack Developer at VK Integrated Systems. 
+        Based in Clarksville, Tennessee.
       </p>
       <div class="experience-grid">
         <h2 class="experienceHeader">Experience</h2>

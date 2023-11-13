@@ -1,48 +1,44 @@
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  padding-bottom: 150px;
-  padding-top: 80px;
+#projects {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.projectHeader {
+  font-size: 2.5rem;
+  color: #51c1f1;
+  margin-bottom: 20px;
+  padding-top: 30px;
 }
 
 .cardGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 5%;
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-bottom: 10%;
-  padding-top: 5%;
-}
-
-.projectHeader {
-  font-size: 3rem;
-  color: #51C1F1;
-  text-align: center;
-  padding-bottom: 10px;
-  padding-top: 10%;
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
 }
 
 .card {
   position: relative;
   width: 100%;
-  height: 100%;
   transition: transform 0.8s;
   transform-style: preserve-3d;
-  background-color: black;
-  border-radius: 5px;
+  border: 1px solid #51c1f1;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .cardHeader {
   text-align: center;
-  font-size: 2rem;
-  color: #51C1F1;
+  font-size: 1.8rem;
+  color: #51c1f1;
+  margin: 20px 0;
 }
 
 .blogImg {
   width: 100%;
+  max-height: 200px;
+  object-fit: cover;
 }
 
 .card.flipped {
@@ -53,45 +49,59 @@
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 
 .back {
   transform: rotateY(180deg);
   position: absolute;
   top: 0;
+  left: 0;
   backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
 .pTag {
-  padding-top: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 15px;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  color: #cecece;
+  text-align: justify;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
-@media screen and (max-width: 540px) {
-  .pTag {
-    font-size: 0.7rem;
-  }
-}
-
-
-.sourceTag {
-  color: white;
-  padding-left: 10px;
-}
-
-.descriptionTag {
-  color: white;
-  float: right;
-  padding-right: 10px;
-  padding-bottom: 10px;
-}
-
+.sourceTag,
+.descriptionTag,
 .backTag {
-  color: white;
-  float: right;
-  padding-right: 15px;
-  padding-bottom: 10px;
+  text-decoration: none;
+  font-size: 1rem;
+  color: #51c1f1;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.sourceTag:hover,
+.descriptionTag:hover,
+.backTag:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .cardGrid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .cardHeader {
+    font-size: 1.5rem;
+  }
+
+  .pTag {
+    font-size: 1rem;
+  }
 }
